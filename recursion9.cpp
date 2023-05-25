@@ -4,6 +4,7 @@
 using namespace std;
 
 int maximumNumber(int, int ,int);
+int minimumNumber(int,int,int);
 
 int main(void){
 	int num1,num2,num3;
@@ -13,7 +14,7 @@ int main(void){
 	cin>>num2;
 	cout<<"please enter value of z : ";
 	cin>>num3;
-	cout<<"maxnum number is : "<<maximumNumber(num1,num2,num3);
+	cout<<"maximum number is : "<<maximumNumber(num1,num2,num3)<<endl;
 	cout<<"minimum number is : "<<minimumNumber(num1,num2,num3);
 	return 0;
 }
