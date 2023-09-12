@@ -144,7 +144,7 @@ int main (void){
 
         switch (choise)
         {
-        case 1:
+        case 1:{
             string accountHolderName;
             double initialBalance;
 
@@ -155,10 +155,16 @@ int main (void){
             cin<<initialBalance;
 
             break;
-        
-        default:
+        }
+        case 2:
+            bank.processTransaction();
             break;
+        case 3:
+            cout<<"Exiting the program"<<endl;
+            return0;
+        default:
+            cout<<"Invalid choice."<<endl;
         }
     }
-    
+    return 0;
 }
