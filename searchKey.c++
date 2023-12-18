@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ctime>
+using namespace std;
 
 // Linear Search Function
 int linearSearch(const int arr[], int size, int key) {
@@ -45,15 +46,15 @@ int main() {
 
     // Output Results
     if (linearResult != -1) {
-        std::cout << "Linear Search: Key found at index " << linearResult << " in " << linearTime << " seconds.\n";
+        cout << "Linear Search: Key found at index " << linearResult << " in " << linearTime << " seconds.\n";
     } else {
         std::cout << "Linear Search: Key not found in " << linearTime << " seconds.\n";
     }
 
     if (binaryResult != -1) {
-        std::cout << "Binary Search: Key found at index " << binaryResult << " in " << binaryTime << " seconds.\n";
+        cout << "Binary Search: Key found at index " << binaryResult << " in " << binaryTime << " seconds.\n";
     } else {
-        std::cout << "Binary Search: Key not found in " << binaryTime << " seconds.\n";
+        cout << "Binary Search: Key not found in " << binaryTime << " seconds.\n";
     }
 
     return 0;
