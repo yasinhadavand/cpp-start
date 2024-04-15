@@ -82,7 +82,7 @@ int pop(struct stack *ps)
         cout << "Stack is empty" << endl;
         exit(1);
     }
-    ps->top
+    return
     ps->items[(ps->top--)];
 }
 
