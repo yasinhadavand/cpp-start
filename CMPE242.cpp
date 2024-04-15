@@ -73,10 +73,17 @@ int pop(struct stack *ps){
 }
 int main(void){
     struct stack s;
-    return 0 ;
-    initializeStack(&s);
     int element;
+    initializeStack(&s);
+    
+    push(&s,10);
+    pop(&s);
+    push(&s,30);
+    push(&s,20)
+
+
     element=pop(&s);
+    return 0 ;
 }
 
 
