@@ -53,11 +53,30 @@ void push(struct stack *ps,int x){
     ps->items[ps->top]=x;   
     
 }
-
+int isStackEmpty(struct stack *ps){
+    if (ps->top == -1)
+    {
+        return 1;
+    }
+    else{
+        return 0;
+    }
+    
+}
+int pop(struct stack *ps){
+    if (isStackEmpty)
+    {
+        cout<<"stack is empty";
+    }
+    ps->items[(ps->top--)];
+    
+}
 int main(void){
     struct stack s;
     return 0 ;
     initializeStack(&s);
+    int element;
+    element=pop(&s);
 }
 
 
