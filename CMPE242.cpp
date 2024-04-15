@@ -32,10 +32,14 @@ struct stack
     int top;
     int items[STACKSIZE];
 };
+void initializeStack (struct stack *ps){
+    ps->top = -1;
+}
 
 int main(void){
     struct stack s;
     return 0 ;
+    initializeStack(&s);
 }
 
 
