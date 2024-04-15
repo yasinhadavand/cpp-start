@@ -44,7 +44,7 @@ int isStackFull(struct stack *ps){
     }
 }
 void push(struct stack *ps,int x){
-    if (isStackFull)
+    if (isStackFull(ps))
     {
         cout<<"stack is full";
         exit(1);
