@@ -35,21 +35,22 @@ struct stack
 void initializeStack (struct stack *ps){
     ps->top = -1;
 }
-int stackIsFull(struct stack *ps){
-    if(ps->top = STACKSIZE - 1){
+int isStackFull(struct stack *ps){
+    if (ps->top=STACKSIZE-1)
+    {
         return 1;
     }else{
         return 0;
     }
 }
-void push(struct stack *ps, int x){
-    if (stackIsFull (ps))
+void push(struct stack *ps,int x){
+    if (isStackFull)
     {
-        cout<<"is full";
+        cout<<"stack is full";
         exit(1);
     }
-    ps->top ++;
-    ps->items[ps->top]=x
+    ps->top++;
+    ps->items[ps->top]=x;   
     
 }
 
