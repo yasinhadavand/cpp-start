@@ -25,65 +25,103 @@
     
 // }
 #include <iostream>
-#define STACKSIZE 100
+using namespace std;
+
+#define STACKSIZE 10
 
 struct stack
 {
     int top;
     int items[STACKSIZE];
 };
-void initializeStack (struct stack *ps){
+
+void initializeStack(struct stack *ps)
+{
     ps->top = -1;
 }
-int isStackFull(struct stack *ps){
-    if (ps->top=STACKSIZE-1)
+
+int isStackFull(struct stack *ps)
+{
+    if (ps->top == STACKSIZE - 1)
     {
         return 1;
-    }else{
+    }
+    else
+    {
         return 0;
     }
 }
-void push(struct stack *ps,int x){
+
+void push(struct stack *ps, int x)
+{
     if (isStackFull(ps))
     {
-        cout<<"stack is full";
+        cout << "Stack is full" << endl;
         exit(1);
     }
     ps->top++;
-    ps->items[ps->top]=x;   
-    
+    ps->items[ps->top] = x;
 }
-int isStackEmpty(struct stack *ps){
+
+int isStackEmpty(struct stack *ps)
+{
     if (ps->top == -1)
     {
         return 1;
     }
-    else{
+    else
+    {
         return 0;
     }
-    
 }
-int pop(struct stack *ps){
-    if (isStackEmpty)
+
+int pop(struct stack *ps)
+{
+    if (isStackEmpty(ps))
     {
-        cout<<"stack is empty";
+        cout << "Stack is empty" << endl;
+        exit(1);
     }
+    ps->top
     ps->items[(ps->top--)];
-    
 }
-int main(void){
+
+void printItems(struct stack *ps)
+{
+    int x;
+    struct stack temp;
+    initializeStack(&temp);
+
+    while (!isStackEmpty(ps))
+    {
+        x = pop(ps);
+        cout << x << endl;
+        push(&temp, x);
+    }
+    while (!isStackEmpty(&temp))
+    {
+        x = pop(&temp);
+        push(ps, x);
+    }
+}
+
+int main(void)
+{
     struct stack s;
     int element;
+    int x;
     initializeStack(&s);
-    
-    push(&s,10);
-    pop(&s);
-    push(&s,30);
-    push(&s,20)
+    for (int i = 0; i < 5; i++)
+    {
+        cout << "Enter item: ";
+        cin >> x;
+        push(&s, x);
+    }
+    cout << "Elements are:" <<endl;
+    printItems(&s);
 
-
-    element=pop(&s);
-    return 0 ;
+    element = pop(&s);
+    return 0;
 }
 
 
